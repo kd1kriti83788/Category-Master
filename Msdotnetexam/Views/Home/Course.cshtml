@@ -1,0 +1,43 @@
+﻿
+<html>
+< head >
+    < title > Display  course </ title >
+</ head >
+< body >
+    < div class= "container" >
+
+<div class="table-responsive">
+                < table class= "table table-bordered" >
+                    < thead >
+                        < tr >
+                            < th > id </ th >
+    < th > Course </ th >
+    < th > Fees </ th >
+    < th > Code </ th >
+                             < th > edit </ th >
+                         </ tr >
+                     </ thead >
+                     < tbody >
+                         @foreach (var items in Model)
+                         {
+                             < tr >
+                                 < td > @items.Id </ td >
+        < td > @items.Course </ td >
+        < td > @items.Fees </ td >
+        < td > @items.Code </ td >
+                                 < td >
+                                     < a class= "btn btn-danger"
+                                        href = "/Home/Edit/@items.Id" > Edit </ a >
+                                 </ td >
+
+                                                     </ tr >
+                                                 }
+                                             </ tbody >
+                                         </ table >
+                                     </ div >
+                     </ div >
+
+
+                             </ body >
+                 </ html >
+
